@@ -14,7 +14,7 @@ function readSingleFile(evt) {
             +"size: " + f.size + " bytes"
       );                          
       contents = content.split("\r\n");
-      //console.log(contents); 
+      console.log(contents); 
       aoc();
     }
     r.readAsText(f);
@@ -25,7 +25,7 @@ function readSingleFile(evt) {
 
 function aoc() {
   var freq = 0, length = contents.length;
-  for(var i = 0; i < length - 1; i++) {
+  for(var i = 0; i < length; i++) {
     freq += parseInt(contents[i]);
     console.log(contents[i]);
     console.log(freq);
