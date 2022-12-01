@@ -61,6 +61,8 @@ function aoc() {
       }
     }
   }
+
+  alert(twice)
 }
 
 document.getElementById("fileinput").addEventListener("change", readSingleFile, false);
