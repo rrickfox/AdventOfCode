@@ -1,0 +1,1 @@
+d=open("6.txt").read().strip();print([min(i+n for i in range(len(d)-n) if len(set(d[i:i+n]))==n) for n in (4,14)])
