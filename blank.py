@@ -2,7 +2,7 @@ import time
 start_time = time.time()
 
 with open("1.txt", "r") as file:
-    lines = file.readlines()
+    lines = [line.strip() for line in file.readlines()]
     data = [line for line in lines]
 
 
