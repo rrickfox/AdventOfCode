@@ -15,7 +15,7 @@ def calc(rob, cost, res, time_start):
     r1cost, r2cost, (r3costOre, r3costClay), (r4costOre, r4costObs) = cost
     maxOre = max([r1cost, r2cost, r3costOre, r4costOre])
     while todo:
-        r1, r2, r3, r4, res1, res2, res3, res4, remaining_time = todo.popleft()
+        r1, r2, r3, r4, res1, res2, res3, res4, remaining_time = todo.pop()
 
         best_geode = max(best_geode, res4)
 
