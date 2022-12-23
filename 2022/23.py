@@ -5,7 +5,7 @@ with open("23.txt", "r") as file:
     lines = [line.strip() for line in file.readlines()]
     # data = [list(line) for line in lines]
 
-def print_data():
+def count_data(p = False):
     global data
     min_x = min(x[0] for x in data)
     min_y = min(x[1] for x in data)
@@ -15,11 +15,11 @@ def print_data():
     for y in range(min_y, max_y+1):
         for x in range(min_x, max_x+1):
             if (x, y) in data:
-                print("#", end="")
+                if p: print("#", end="")
             else:
-                print(".", end="")
+                if p: print(".", end="")
                 ret += 1
-        print()
+        if p: print()
     return ret
 
 data = set()
@@ -88,12 +88,13 @@ def calc():
 for _ in range(10):
     calc()
 
-res = print_data()
+res = count_data()
 print(res)
 
 while calc():
     pass
 
+count_data()
 print(rounds)
 
 print("--- %s seconds ---" % (time.time() - start_time))
