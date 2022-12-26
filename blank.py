@@ -9,4 +9,4 @@ with open("1.txt", "r") as file:
 
 print()
 
-print("--- %s seconds ---" % (time.time() - start_time))
+print(f"--- {(time.time() - start_time)} seconds ---")
