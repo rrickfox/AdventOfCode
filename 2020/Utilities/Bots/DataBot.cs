@@ -54,7 +54,7 @@ namespace _2020.Utilities.Bots
             string p = Path.Combine(path, $"{day.ToString("D2")}.txt");
             if (File.Exists(p) && new FileInfo(p).Length > 0)
             {
-                return File.ReadAllText(p);
+                return File.ReadAllText(p).Replace("\r", "");
             }
 
             Console.WriteLine($"Day {day} ({year}): File not found");
