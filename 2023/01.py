@@ -6,6 +6,7 @@ with open("01.txt", "r") as file:
     data = [int(v[0]+v[-1]) for line in lines if (v := re.sub("\D", "", line))]
 
 print(sum(data))
+print(sum([int(v[0]+v[-1]) for line in open("01.txt", "r").readlines() if (v := re.sub("\D", "", line.strip()))]))
 
 def get_numbers(s: str) -> str:
     ret = ""
@@ -32,7 +33,7 @@ def get_numbers(s: str) -> str:
 data = [int(v[0]+v[-1]) for line in lines if (v := get_numbers(line))]
 for line in lines:
     v = get_numbers(line)
-    print(line, v)
+    # print(line, v)
 print(sum(data))
 
 print(f"--- {(time.time() - start_time)} seconds ---")
