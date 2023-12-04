@@ -31,9 +31,7 @@ def get_numbers(s: str) -> str:
     return ret
 
 data = [int(v[0]+v[-1]) for line in lines if (v := get_numbers(line))]
-for line in lines:
-    v = get_numbers(line)
-    # print(line, v)
 print(sum(data))
+n = ["one","two","three","four","five","six","seven","eight","nine"];print(sum([int(v[0]+v[-1]) for line in open("01.txt", "r").readlines() if (v := "".join([s if s.isnumeric() else str(t[0]) if t[0]>0 else "" for i, s in enumerate(line.strip()) if (t := [j+1 for j in range(9) if line[i:].startswith(n[j])]+[-1])]))]))
 
 print(f"--- {(time.time() - start_time)} seconds ---")
