@@ -1,0 +1,3 @@
+l=open("11.txt").read().split("\n");g=[(x,y) for y,x in enumerate(l) for x,c in enumerate(x) if c=="#"];n=m=0;t={(a,b) for a in g for b in g if a!=b};j={x for x,c in enumerate(zip(*l)) if "".join(c)=="."*len(l)};k={y for y,c in enumerate(l) if c=="."*len(l[0])}
+for (x1,y1),(x2,y2) in t:c=sum(1 for i in range(min(x1,x2)+1,max(x1,x2)+1) if i in j);r=sum(1 for i in range(min(y1,y2)+1,max(y1,y2)+1) if i in k);p=abs(x1-x2)+abs(y1-y2);n+=p+c+r;m+=p+(c+r)*999999
+print(n//2,m//2)
