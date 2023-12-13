@@ -18,6 +18,8 @@ for a in galaxies:
 for (x1,y1), (x2,y2) in galaxy_pairs:
     c = len(empty_cols.intersection(set(range(min(x1, x2)+1, max(x1, x2)+1))))
     r = len(empty_rows.intersection(set(range(min(y1, y2)+1, max(y1, y2)+1))))
+    # c = sum(1 for i in range(min(x1, x2)+1, max(x1, x2)+1) if i in empty_cols)
+    # r = sum(1 for i in range(min(y1, y2)+1, max(y1, y2)+1) if i in empty_rows)
     s += abs(x1-x2) + abs(y1-y2) + c + r
     s2 += abs(x1-x2) + abs(y1-y2) + c*999999 + r*999999
 
