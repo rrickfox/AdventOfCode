@@ -44,7 +44,6 @@ print(len(visited))
 visited.discard((start_pos_x, start_pos_y))
 num_loops = 0
 for i, obstacle_pos in enumerate(visited):
-    if i % 100 == 0: print("checking position", i, "of", len(visited))
     pos_x = start_pos_x
     pos_y = start_pos_y
     dir = (0, -1)
